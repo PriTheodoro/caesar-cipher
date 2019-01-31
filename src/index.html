@@ -4,12 +4,24 @@
     <meta charset="utf-8">
     <title>Caesar Cipher</title>
     <link rel="stylesheet" href="style.css" />
-    <h1>SECURITY GIRLS</h1> 
+      <h1>SECURITY GIRLS</h1> 
       <p>Seja bem vinda! Aqui é um ambiente seguro para você se comunicar!</p>
   </head>
     <body>
-    <div id="enconde"></div>
-    <textarea id ="textoMsg"></textarea>
+    <div1>
+      <input type= "text" id="enterText" placeholder ="Digite aqui sua mensagem"></input>
+      <input type= "number" id="enterNumber" placeholder ="Digite o deslocamento desejado"></input>
+      <button onclick= "encode()">CRIPITOGRAFAR</button> 
+    </div1>
+    <div2>
+        <p id="textCipher"></p>
+        <p id="textDecipher"></p>
+    </div2>
+    <div3>
+        <input type= "text" id="enterText" placeholder ="Digite aqui sua mensagem"></input>
+        <input type= "number" id="enterNumber" placeholder ="Digite o deslocamento desejado"></input>
+        <button onclick= "decode()">DESCRIPITOGRAFAR</button> 
+      </div3>
     <script src="cipher.js"></script>
     <script src="tests.js"></script>
   </body>
