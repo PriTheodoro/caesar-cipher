@@ -4,24 +4,33 @@
     <meta charset="utf-8">
     <title>Caesar Cipher</title>
     <link rel="stylesheet" href="style.css" />
-      <h1>SECURITY GIRLS</h1> 
-      <p>Seja bem vinda! Aqui é um ambiente seguro para você se comunicar!</p>
-  </head>
+      <h1>ANGELS GIRLS</h1> 
+      <h2>MENSAGENS SEGURAS PARA MULHERES</h2>
+      <br>
+      <h3>Seja bem vinda!</h3>
+      <p>Criptografe ou descriptografe uma mensagem e comunique-se com segurança!</p>
+    </head>
     <body>
-    <div1>
-      <input type= "text" id="enterText" placeholder ="Digite aqui sua mensagem"></input>
-      <input type= "number" id="enterNumber" placeholder ="Digite o deslocamento desejado"></input>
-      <button onclick= "encode()">CRIPITOGRAFAR</button> 
-    </div1>
-    <div2>
+      <div1 class = "criptar">
+        <input type= "text" id="enterTextEncode" placeholder ="Digite aqui sua mensagem"></input>
+        <br><br>
+        <input type= "number" id="enterNumberEncode" placeholder ="Digite o deslocamento desejado"></input>
+        <br><br>
+        <button onclick= "encode()">CRIPTOGRAFAR</button>
+      </div1>
+      <div2 class = "MsgCriptar">
         <p id="textCipher"></p>
-        <p id="textDecipher"></p>
-    </div2>
-    <div3>
-        <input type= "text" id="enterText" placeholder ="Digite aqui sua mensagem"></input>
-        <input type= "number" id="enterNumber" placeholder ="Digite o deslocamento desejado"></input>
-        <button onclick= "decode()">DESCRIPITOGRAFAR</button> 
+      </div2>
+      <div3 class = "descriptar">
+        <input type= "text" id="enterTextDecode" placeholder ="Digite aqui sua mensagem"></input>
+        <br><br>
+        <input type= "number" id="enterNumberDecode" placeholder ="Digite o deslocamento desejado"></input>
+        <br><br>
+        <button onclick= "decode()">DESCRIPTOGRAFAR</button> 
       </div3>
+      <div4 class = "MsgDescriptar">
+        <p id="textDecipher"></p>
+      </div4>
     <script src="cipher.js"></script>
     <script src="tests.js"></script>
   </body>

@@ -2,10 +2,10 @@
 
  function encode(){
   
-  let sentenceBeCode = document.getElementById("enterText").value
-  let desloc = document.getElementById("enterNumber").value
+  let sentenceBeCode = document.getElementById("enterTextEncode").value
+  let desloc = document.getElementById("enterNumberEncode").value
   desloc = parseInt(desloc)
-  let codLetraAscII = '';
+  let codLetraAscII = 0;
   let sentenceNew = '';
   
   for(let i = 0; i < sentenceBeCode.length; i++){
@@ -32,15 +32,16 @@
     
    
 function decode(){
-  let sentenceBeCode = document.getElementById("enterText").value
-  let desloc = document.getElementById("enterNumber").value
+  let sentenceBeCode = document.getElementById("enterTextDecode").value
+  let desloc = document.getElementById("enterNumberDecode").value
   desloc = parseInt(desloc)
-  let codLetraAscII = '';
+  let codLetraAscII = 0;
   let sentenceNew = '';
     
     for(let i = 0; i < sentenceBeCode.length; i++){
     codLetraAscII = sentenceBeCode.charCodeAt(i); 
     let sentenceForm = '';
+    console.log(codLetraAscII);
      
       if (sentenceBeCode.charCodeAt(i) >= 65 && sentenceBeCode.charCodeAt(i) <= 90){
          sentenceForm  = ((codLetraAscII - 65 - (desloc % 26) + 26) % 26 + 65);
@@ -52,6 +53,9 @@ function decode(){
         }
       
       sentenceNew += String.fromCharCode(sentenceForm);
+      
+
+      console.log(sentenceForm);
       
       console.log(sentenceNew);
       document.getElementById("textDecipher").innerHTML = sentenceNew;  
