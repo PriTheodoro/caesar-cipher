@@ -1,6 +1,4 @@
-
-
- function encode(){
+function encode(){
   
   let sentenceBeCode = document.getElementById("enterTextEncode").value
   let desloc = document.getElementById("enterNumberEncode").value
@@ -8,9 +6,9 @@
   let codLetraAscII = 0;
   let sentenceNew = '';
   
-  for(let i = 0; i < sentenceBeCode.length; i++){
-  codLetraAscII = sentenceBeCode.charCodeAt(i); 
-  let sentenceForm = '';
+    for(let i = 0; i < sentenceBeCode.length; i++){
+    codLetraAscII = sentenceBeCode.charCodeAt(i); 
+    let sentenceForm = '';
    
     if (sentenceBeCode.charCodeAt(i) >= 65 && sentenceBeCode.charCodeAt(i) <= 90){ 
       sentenceForm  = ((codLetraAscII - 65 + (desloc % 26 ) + 26 ) % 26 + 65);
@@ -20,14 +18,12 @@
 
     } else { sentenceNew += String.fromCharCode(codLetraAscII) 
   }
-  console.log(sentenceForm);  
-  sentenceNew += String.fromCharCode(sentenceForm);
 
-  console.log(sentenceNew);
+  sentenceNew += String.fromCharCode(sentenceForm);
   document.getElementById("textCipher").innerHTML = sentenceNew;   
   }
-      
-  }
+  return false;
+}
        
     
    
@@ -50,15 +46,12 @@ function decode(){
         sentenceForm = ((codLetraAscII - 97 - (desloc % 26) + 26) % 26 + 97);
 
       } else { sentenceNew += String.fromCharCode(codLetraAscII) 
-        }
+      }
       
       sentenceNew += String.fromCharCode(sentenceForm);
-      
-
-      console.log(sentenceForm);
-      
-      console.log(sentenceNew);
       document.getElementById("textDecipher").innerHTML = sentenceNew;  
     }
+
+    return false;
   }
     
