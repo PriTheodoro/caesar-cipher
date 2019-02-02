@@ -54,4 +54,20 @@ function decode(){
 
     return false;
   }
+
+  function newMessenger(){
+    let cleanCipher = document.getElementById("enterTextEncode");
+    cleanCipher.innerHTML = " ";
+
+    let cleanDecipher = document.getElementById("enterTextDecode");
+    cleanDecipher.innerHTML = " ";
+
+    let cleanTexCipher = document.getElementById("textCipher");
+    cleanTexCipher.innerHTML = " ";
+    
+    let cleanTextDecipher = document.getElementById("textDecipher");
+    cleanTextDecipher.innerHTML = " ";
+
+    return false; 
+  }
     
