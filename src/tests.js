@@ -2,9 +2,9 @@ function test(msgEnter, msgReceived){
    
     if(msgEnter === msgReceived){
         console.log('Tudo certo!')
-    }
-        console.log(' Para o resultado ' + msgReceived + ' deu ruim! ' );
-        
+    }else {
+     console.log(' Para o resultado ' + msgReceived + ' deu ruim! ' );
+    }    
 }
 
 test(encode('Abc',1),'Bcd');

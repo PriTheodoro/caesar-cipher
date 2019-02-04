@@ -3,7 +3,7 @@ function encode(){
   let sentenceBeCode = document.getElementById("enterTextEncode").value
   let desloc = document.getElementById("enterNumberEncode").value
   desloc = parseInt(desloc)
-  let codLetraAscII = 0;
+  let codLetraAscII = '';
   let sentenceNew = '';
   
     for(let i = 0; i < sentenceBeCode.length; i++){
